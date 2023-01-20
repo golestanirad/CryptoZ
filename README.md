@@ -1,14 +1,14 @@
-your .env file will look like:
+## Your .env file will look like:
 
-REACT_APP_RAPIDAPI_KEY =  'YOUR_KEY_FROM_RAPIDAPI'
+`REACT_APP_RAPIDAPI_KEY =  'YOUR_KEY_FROM_RAPIDAPI'`
 
-REACT_APP_CRYPTO_API_URL = 'https://coinranking1.p.rapidapi.com'
-REACT_APP_NEWS_API_URL = 'https://bing-news-search1.p.rapidapi.com'
+`REACT_APP_CRYPTO_API_URL = 'https://coinranking1.p.rapidapi.com'`
 
-REACT_APP_NEWS_RAPIDAPI_HOST = 'bing-news-search1.p.rapidapi.com'
-REACT_APP_CRYPTO_RAPIDAPI_HOST ='coinranking1.p.rapidapi.com'
+ `REACT_APP_NEWS_API_URL = 'https://bing-news-search1.p.rapidapi.com'`
 
-ESLINT_NO_DEV_ERRORS=true
+ `REACT_APP_NEWS_RAPIDAPI_HOST = 'bing-news-search1.p.rapidapi.com'`
+
+` REACT_APP_CRYPTO_RAPIDAPI_HOST ='coinranking1.p.rapidapi.com'`
 
 # Getting Started with Create React App
 
