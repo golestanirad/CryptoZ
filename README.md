@@ -1,3 +1,15 @@
+your .env file will look like:
+
+REACT_APP_RAPIDAPI_KEY =  'YOUR_KEY_FROM_RAPIDAPI'
+
+REACT_APP_CRYPTO_API_URL = 'https://coinranking1.p.rapidapi.com'
+REACT_APP_NEWS_API_URL = 'https://bing-news-search1.p.rapidapi.com'
+
+REACT_APP_NEWS_RAPIDAPI_HOST = 'bing-news-search1.p.rapidapi.com'
+REACT_APP_CRYPTO_RAPIDAPI_HOST ='coinranking1.p.rapidapi.com'
+
+ESLINT_NO_DEV_ERRORS=true
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
@@ -13,19 +25,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-your .env file will look like:
-
-REACT_APP_RAPIDAPI_KEY =  'YOUR_KEY_FROM_RAPIDAPI'
-
-REACT_APP_CRYPTO_API_URL = 'https://coinranking1.p.rapidapi.com'
-REACT_APP_NEWS_API_URL = 'https://bing-news-search1.p.rapidapi.com'
-
-REACT_APP_NEWS_RAPIDAPI_HOST = 'bing-news-search1.p.rapidapi.com'
-REACT_APP_CRYPTO_RAPIDAPI_HOST ='coinranking1.p.rapidapi.com'
-
-ESLINT_NO_DEV_ERRORS=true
-
-
 
 ### `npm test`
 
