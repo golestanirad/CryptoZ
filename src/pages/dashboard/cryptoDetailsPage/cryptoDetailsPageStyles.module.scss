@@ -1,0 +1,58 @@
+@import "../../../index.scss";
+
+.container {
+  // height: 100%;
+  margin: 20px;
+  padding-top: 30px;
+
+  .title {
+    font-size: 40px;
+    @include titleFont;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+  }
+  .selectLabel {
+    margin-right: 10px;
+  }
+  .chart {
+    width: 99%;
+    height: 40vh;
+    margin-top: 10px;
+  }
+  .infoConatiner {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    @media only screen and (max-width: 860px) {
+      grid-template-columns: 1fr;
+    }
+    .label {
+      display: flex;
+      align-items: center;
+      text-transform: capitalize;
+      .icon {
+        margin-right: 5px;
+      }
+    }
+    .value {
+      text-decoration: none;
+      color: var(--purple);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    .chart {
+      display: none;
+    }
+    .timeSelectContainer {
+      display: none;
+    }
+    .infoConatiner {
+      grid-template-columns: 1fr;
+    }
+  }
+}

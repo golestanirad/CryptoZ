@@ -1,0 +1,59 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  .mode {
+    position: fixed;
+    bottom: 10px;
+    left: 40px;
+    z-index: 100;
+    @media screen and (max-width: 600px) {
+      left: 20px;
+    }
+  }
+  .layout {
+    @media screen and (max-width: 600px) {
+      .bigScreenMenu {
+        display: none;
+      }
+      .smallScreenMenu {
+        display: block;
+        padding: 10px;
+
+        .hideMenu {
+          > div {
+            right: 100vw;
+            left: -100vw;
+            transition: 1s;
+          }
+        }
+        .showMenu {
+          > div {
+            right: 0px;
+            left: 0px;
+            transition: 1s;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 601px) {
+      .bigScreenMenu {
+        display: block;
+      }
+      .smallScreenMenu {
+        display: none;
+      }
+    }
+  }
+  .outlet {
+    width: 100%;
+    height: calc(100vh - var(--big-screen-footer-height));
+    @media screen and (max-width: 600px) {
+      height: calc(
+        100vh - var(--big-screen-header-height) -
+          var(--big-screen-footer-height)
+      );
+      margin-top: var(--big-screen-header-height);
+    }
+  }
+}

@@ -1,58 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import {
+  CryptoDetailsPage,
+  DashboardPage,
+  ErrorPage,
+  HomePage,
+  CryptoCurrencies,
+  NewsPage,
+  ExchangePage,
+} from "./pages";
+import { routes } from "./app/constants";
+import { useAppSelector } from "./store/hooks";
+import { useDarkMode } from "./app/hooks";
 
-function App() {
+const App: React.FC = () => {
+  /// hooks
+  const { coins, favoriteCoins } = useAppSelector((state) => state.crypto);
+
+  const { isDarkMode } = useDarkMode(true);
+  console.log({ isDarkMode });
+  /// helper
+  const fc = coins.filter((coin) => favoriteCoins.includes(coin.uuid));
+
+  ///// return
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Routes>
+        <Route path={routes.home} element={<DashboardPage />}>
+          <Route index element={<HomePage />} />
+
+          <Route
+            path={routes.cryptocurrencies}
+            element={<CryptoCurrencies coins={coins} />}
           >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Route path=":coinId" element={<CryptoDetailsPage />} />
+          </Route>
+
+          <Route path={routes.exchanges} element={<ExchangePage />} />
+
+          <Route path={routes.news} element={<NewsPage />} />
+
+          <Route
+            path={routes.favorite}
+            element={<CryptoCurrencies coins={fc} />}
           >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+            <Route path=":coinId" element={<CryptoDetailsPage />} />
+          </Route>
+        </Route>
+
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

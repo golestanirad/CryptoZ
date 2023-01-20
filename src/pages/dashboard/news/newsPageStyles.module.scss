@@ -1,0 +1,18 @@
+@import "../../../index.scss";
+.container {
+  overflow-y: auto;
+  height: 100%;
+  h1 {
+    @include titleFont;
+    font-size: 50px;
+    text-align: center;
+  }
+  .news {
+    overflow-y: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}

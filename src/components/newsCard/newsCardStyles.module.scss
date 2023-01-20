@@ -1,0 +1,43 @@
+@import "../../index.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  text-decoration: none;
+  min-height: 350px;
+  transition: 1s;
+  &:hover {
+    transform: rotate(2deg);
+
+    box-shadow: 0 5px 8px rgba($color: #6e6e6e, $alpha: 1);
+  }
+  .header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    .title {
+      flex: 3;
+      @include titleFont;
+      letter-spacing: 0;
+    }
+    .image {
+      flex: 1;
+      width: 30%;
+      border-radius: 5px;
+    }
+  }
+  .description {
+    padding: 5px;
+    height: 100px;
+    color: var(--purple);
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .footer {
+    .providerName {
+      margin-top: 10px;
+      font-size: 15px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  position: fixed;
+  height: calc(
+    100vh - var(--big-screen-header-height) - var(--big-screen-footer-height)
+  );
+  top: var(--big-screen-header-height);
+  bottom: var(--big-screen-footer-height);
+  left: 0;
+  right: 0;
+  > div {
+    height: 100%;
+  }
+}

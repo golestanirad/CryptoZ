@@ -1,0 +1,63 @@
+.container {
+  .main {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    svg {
+      font-size: 40px;
+      color: var(--orange);
+    }
+    .link {
+      font-size: 20px;
+      letter-spacing: var(--letter-space);
+      text-decoration: none;
+      margin-left: 10px;
+      transition: 1s;
+      color: var(--purple);
+      display: flex;
+      justify-content: center;
+      column-gap: 20px;
+      &:hover {
+        letter-spacing: 4px;
+      }
+      span {
+        align-self: center;
+      }
+    }
+    .active {
+      color: var(--golden);
+    }
+    .toggle {
+      margin-left: 10px;
+      padding-top: 5px;
+    }
+  }
+  .subMenuContainer {
+    width: 100%;
+    overflow-y: auto;
+    transition: 1s;
+    margin: 0px;
+    .subMenuItemContainer {
+      width: 100%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+      text-decoration: none;
+      padding-left: 20px;
+      color: var(--purple);
+      transition: 1s;
+
+      .subMenuItemImage {
+        width: 30px;
+        margin-right: 10px;
+        border-radius: 5px;
+      }
+    }
+    .subActive {
+      color: var(--golden);
+    }
+  }
+}

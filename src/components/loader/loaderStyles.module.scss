@@ -1,0 +1,12 @@
+.image {
+  width: 10vw;
+  animation: rotation 2s infinite linear;
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+}
